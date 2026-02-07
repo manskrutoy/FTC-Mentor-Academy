@@ -1,0 +1,256 @@
+.page {
+    min-height: calc(100vh - 70px);
+    padding: 2rem 0 4rem;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #CBD5E1;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94A3B8;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.backLink:hover {
+    color: #667EEA;
+}
+
+.lessonContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lessonTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #E2E8F0;
+    line-height: 1.2;
+}
+
+.markdown {
+    color: #CBD5E1;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.markdown h2 {
+    font-size: 2rem;
+    color: #E2E8F0;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown h3 {
+    font-size: 1.5rem;
+    color: #E2E8F0;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.markdown p {
+    margin-bottom: 1rem;
+}
+
+.markdown ul,
+.markdown ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown strong {
+    color: #E2E8F0;
+    font-weight: 600;
+}
+
+.markdown code {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #A5B4FC;
+}
+
+.quizPrompt {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(102, 126, 234, 0.1);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+.quizSection {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.quizSection h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #E2E8F0;
+}
+
+.question {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.question:last-of-type {
+    border-bottom: none;
+}
+
+.question h3 {
+    font-size: 1.2rem;
+    color: #94A3B8;
+    margin-bottom: 0.75rem;
+}
+
+.questionText {
+    font-size: 1.1rem;
+    color: #E2E8F0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(51, 65, 85, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    background: rgba(51, 65, 85, 0.6);
+}
+
+.option.selected {
+    border-color: #667EEA;
+    background: rgba(102, 126, 234, 0.2);
+}
+
+.option.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10B981;
+}
+
+.option.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #EF4444;
+}
+
+.optionLabel {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #E2E8F0;
+    flex-shrink: 0;
+}
+
+.option.correct .optionLabel {
+    background: #10B981;
+}
+
+.option.incorrect .optionLabel {
+    background: #EF4444;
+}
+
+.optionText {
+    flex: 1;
+    color: #CBD5E1;
+}
+
+.checkmark {
+    font-size: 1.5rem;
+    color: #10B981;
+}
+
+.explanation {
+    padding: 1rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-left: 3px solid #667EEA;
+    border-radius: 0.5rem;
+    color: #CBD5E1;
+    margin-top: 1rem;
+}
+
+.quizResults {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.quizResults h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #E2E8F0;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667EEA;
+    margin-bottom: 2rem;
+}
+
+.resultActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.lessonFooter {
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .lessonTitle {
+        font-size: 2rem;
+    }
+
+    .markdown h2 {
+        font-size: 1.5rem;
+    }
+
+    .resultActions {
+        flex-direction: column;
+    }
+}

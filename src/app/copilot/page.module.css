@@ -1,0 +1,140 @@
+.page {
+    padding: var(--space-16) 0;
+    min-height: 90vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-6);
+    max-width: var(--container-max-width);
+}
+
+.chatCard {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header {
+    padding: var(--space-6);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.header h1 {
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.messagesContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.message {
+    display: flex;
+    margin-bottom: var(--space-3);
+}
+
+.userMessage {
+    justify-content: flex-end;
+}
+
+.assistantMessage {
+    justify-content: flex-start;
+}
+
+.messageContent {
+    max-width: 75%;
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    line-height: 1.6;
+}
+
+.userMessage .messageContent {
+    background: var(--color-primary);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.assistantMessage .messageContent {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border-bottom-left-radius: 4px;
+    border-left: 3px solid var(--color-primary);
+}
+
+.loading {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.inputForm {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-6);
+    border-top: 2px solid var(--color-border);
+}
+
+.input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.infoCard {
+    height: fit-content;
+    padding: var(--space-6);
+}
+
+.infoCard h3 {
+    margin-bottom: var(--space-4);
+}
+
+.exampleList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.exampleList li {
+    padding: var(--space-3);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: var(--text-sm);
+}
+
+.exampleList li:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(4px);
+}
+
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .chatCard {
+        height: 600px;
+    }
+}

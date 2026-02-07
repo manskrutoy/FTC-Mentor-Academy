@@ -1,0 +1,136 @@
+.footer {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 1) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem 0 2rem;
+    margin-top: 6rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(102, 126, 234, 0.5) 50%,
+            transparent 100%);
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.brandSection {
+    max-width: 350px;
+}
+
+.brandName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.75rem;
+}
+
+.brandTagline {
+    color: #94A3B8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.linksSection {}
+
+.linksTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #E2E8F0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksList li {
+    margin-bottom: 0.75rem;
+}
+
+.linksList a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.linksList a:hover {
+    color: #667EEA;
+    transform: translateX(4px);
+}
+
+.footerBottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: #64748B;
+    font-size: 0.875rem;
+}
+
+.disclaimer {
+    color: #64748B;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .brandSection {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .linksList a:hover {
+        transform: translateX(0);
+    }
+}

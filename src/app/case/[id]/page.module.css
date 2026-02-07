@@ -1,0 +1,466 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #667EEA;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.xpNotification {
+    position: fixed;
+    top: 100px;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.xpGained {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.levelUpBadge {
+    background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.newBadge {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    color: #60A5FA;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: #93C5FD;
+}
+
+.error {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.error h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #EF4444;
+}
+
+.backButton {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.backButton:hover {
+    transform: translateY(-2px);
+}
+
+.caseHeader {
+    margin-bottom: 2rem;
+}
+
+.metadata {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.category {
+    padding: 0.4rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #A5B4FC;
+    text-transform: capitalize;
+}
+
+.difficulty {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promptSection,
+.optionsSection,
+.verdictSection,
+.explanationSection,
+.alternativeSection,
+.rulesSection {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.promptSection h2,
+.optionsSection h2,
+.verdictSection h2,
+.explanationSection h2,
+.alternativeSection h2,
+.rulesSection h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #F1F5F9;
+}
+
+.prompt {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #CBD5E1;
+    font-style: italic;
+    border-left: 4px solid #667EEA;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(30, 41, 59, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover:not(.correct):not(.incorrect) {
+    border-color: rgba(102, 126, 234, 0.5);
+    background: rgba(30, 41, 59, 0.6);
+    transform: translateX(4px);
+}
+
+.option.selected {
+    border-color: #667EEA;
+    background: rgba(102, 126, 234, 0.2);
+}
+
+.option.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10B981;
+    cursor: default;
+}
+
+.option.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #EF4444;
+    cursor: default;
+}
+
+.incorrectBadge {
+    padding: 0.25rem 0.75rem;
+    background: #EF4444;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.resultSection {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resultCorrect {
+    background: rgba(16, 185, 129, 0.15);
+    border: 2px solid #10B981;
+}
+
+.resultIncorrect {
+    background: rgba(239, 68, 68, 0.15);
+    border: 2px solid #EF4444;
+}
+
+.resultSection h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.resultCorrect h2 {
+    color: #10B981;
+}
+
+.resultIncorrect h2 {
+    color: #F87171;
+}
+
+.optionHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.optionLabel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 50%;
+    font-weight: 700;
+    color: #A5B4FC;
+    font-size: 0.95rem;
+}
+
+.correct .optionLabel {
+    background: rgba(16, 185, 129, 0.3);
+    color: #34D399;
+}
+
+.correctBadge {
+    padding: 0.35rem 0.85rem;
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #34D399;
+    font-weight: 600;
+}
+
+.optionText {
+    margin: 0;
+    color: #E2E8F0;
+    line-height: 1.6;
+}
+
+.verdict {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FCD34D;
+    margin: 0;
+}
+
+.explanation,
+.alternative {
+    line-height: 1.8;
+    color: #CBD5E1;
+    margin: 0;
+}
+
+.alternativeSection {
+    background: rgba(16, 185, 129, 0.05);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.alternativeSection h2 {
+    color: #34D399;
+}
+
+.rulesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rulesList li {
+    padding: 0.75rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 3px solid #667EEA;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: #CBD5E1;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button,
+.buttonSecondary {
+    flex: 1;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.button {
+    background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    color: white;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+}
+
+.buttonSecondary {
+    background: rgba(30, 41, 59, 0.6);
+    color: #E2E8F0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.buttonSecondary:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .promptSection,
+    .optionsSection,
+    .verdictSection,
+    .explanationSection,
+    .alternativeSection,
+    .rulesSection {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,346 @@
+.page {
+    min-height: calc(100vh - 70px);
+    padding: 2rem 0 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.backLink {
+    display: inline-block;
+    color: #94A3B8;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.backLink:hover {
+    color: #667EEA;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667EEA 0%, #F5576C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #CBD5E1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.categoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.categoryCard {
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.categoryCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.categoryCard:hover::before {
+    opacity: 1;
+}
+
+.categoryCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(102, 126, 234, 0.4);
+}
+
+.categoryCard.generating {
+    pointer-events: none;
+}
+
+.categoryIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.categoryCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.categoryCard p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.loadingOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingOverlay span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.error {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.error h3 {
+    color: #FCA5A5;
+    margin-bottom: 1rem;
+}
+
+.error p {
+    color: #CBD5E1;
+    margin-bottom: 1.5rem;
+}
+
+.generatedCase {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.caseHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.metadata {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.category {
+    padding: 0.5rem 1rem;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #A5B4FC;
+    font-weight: 500;
+}
+
+.difficulty {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.caseHeader h2 {
+    font-size: 2rem;
+    color: #E2E8F0;
+}
+
+.caseContent {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #E2E8F0;
+}
+
+.section p {
+    line-height: 1.7;
+    color: #CBD5E1;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    border: 2px solid;
+    transition: all 0.3s;
+}
+
+.option.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10B981;
+}
+
+.option.incorrect {
+    background: rgba(51, 65, 85, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.optionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.optionLabel {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.correctBadge {
+    padding: 0.25rem 0.75rem;
+    background: #10B981;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.option p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.verdict {
+    font-weight: 600;
+    color: #F5576C;
+    font-size: 1.1rem;
+}
+
+.alternative {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.alternative h3 {
+    color: #10B981;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    padding: 0.75rem 1rem;
+    background: rgba(51, 65, 85, 0.4);
+    border-left: 3px solid #667EEA;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #CBD5E1;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .categoriesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .caseContent {
+        padding: 1.5rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}

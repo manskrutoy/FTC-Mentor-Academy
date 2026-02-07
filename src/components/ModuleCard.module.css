@@ -1,0 +1,73 @@
+.moduleCard {
+    position: relative;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.moduleCard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.locked {
+    opacity: 0.6;
+}
+
+.locked:hover {
+    transform: translateY(-2px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.required {
+    font-size: var(--text-xs);
+}
+
+.lockIcon {
+    font-size: var(--text-2xl);
+}
+
+.title {
+    margin-bottom: var(--space-3);
+    font-size: var(--text-xl);
+}
+
+.description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-3);
+}
+
+.progress {
+    font-weight: 600;
+    color: var(--color-primary);
+}

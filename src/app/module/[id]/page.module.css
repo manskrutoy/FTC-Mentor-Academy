@@ -1,0 +1,86 @@
+.page {
+    padding: var(--space-16) 0;
+    min-height: 80vh;
+}
+
+.loading,
+.empty {
+    text-align: center;
+    padding: var(--space-16);
+    color: var(--color-text-secondary);
+}
+
+.header {
+    margin-bottom: var(--space-12);
+}
+
+.description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-4);
+}
+
+.lessonsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.lessonCard {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.lessonCard:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.locked:hover {
+    transform: translateX(2px);
+}
+
+.lessonNumber {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    font-weight: 700;
+}
+
+.lessonContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.lessonContent h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+}
+
+.lockText {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+}
+
+.lockIcon {
+    font-size: var(--text-2xl);
+}

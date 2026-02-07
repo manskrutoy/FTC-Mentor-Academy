@@ -1,0 +1,88 @@
+.page {
+    padding: var(--space-16) 0;
+    min-height: 80vh;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: var(--space-16);
+    color: var(--color-text-secondary);
+}
+
+.lessonCard {
+    padding: var(--space-12);
+}
+
+.lessonCard h1 {
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.content {
+    line-height: 1.8;
+    font-size: var(--text-lg);
+}
+
+.content h2 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    color: var(--color-primary);
+}
+
+.content h3 {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+}
+
+.content p {
+    margin-bottom: var(--space-6);
+    color: var(--color-text-primary);
+}
+
+.content ul,
+.content ol {
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-8);
+}
+
+.content li {
+    margin-bottom: var(--space-3);
+}
+
+.content strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.content em {
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+.content code {
+    background: var(--color-bg-tertiary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.actions {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 2px solid var(--color-border);
+    text-align: center;
+}
+
+.completedBanner {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid var(--color-success);
+    border-radius: var(--radius-md);
+    color: var(--color-success);
+    font-weight: 600;
+    text-align: center;
+}
